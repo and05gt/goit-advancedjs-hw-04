@@ -3,20 +3,17 @@ import axios from 'axios';
 const BASE_URL = 'https://pixabay.com/api/';
 const API_KEY = '45098257-09112d803d024f473cdacef7f';
 
-export function getImagesByQuery(query) {
+export async function getImagesByQuery(query, page = 1) {
   const searchParams = {
     key: API_KEY,
     q: query,
     image_type: 'photo',
     orientation: 'horizontal',
     safesearch: true,
+    per_page: 15,
+    page: page,
   };
 
-  return axios
-    .get(BASE_URL, { params: searchParams })
-    .then(response => response.data)
-    .catch(error => {
-      console.error('Error fetching data', error);
-      throw error;
-    });
+  const response = await axios.get(BASE_URL, { params: searchParams });
+  return response.data;
 }

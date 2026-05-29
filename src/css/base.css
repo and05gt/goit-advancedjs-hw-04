@@ -59,7 +59,7 @@ input:focus {
   border: 1px solid #4e75ff;
 }
 
-button {
+.form button {
   width: 91px;
   height: 40px;
   padding: 8px 16px;
@@ -75,7 +75,7 @@ button {
   transition: background-color 300ms ease-in-out;
 }
 
-button:hover {
+.form button:hover {
   background-color: #6c8cff;
 }
 
@@ -133,6 +133,29 @@ button:hover {
   color: #2e2f42;
   font-size: 12px;
   letter-spacing: 0.48px;
+}
+
+.load-more-btn {
+  width: 126px;
+  height: 40px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  background-color: #4e75ff;
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0.64px;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 44px;
+  transition: background-color 300ms ease-in-out;
+}
+
+.load-more-btn:hover {
+  background-color: #6c8cff;
 }
 
 .loader {
@@ -197,4 +220,8 @@ button:hover {
 
 .loader-active {
   display: block;
+}
+
+.hidden {
+  display: none;
 }
